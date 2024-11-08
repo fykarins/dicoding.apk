@@ -1,0 +1,71 @@
+<resources>
+    <!-- General Strings -->
+    <string name="app_name">StoryApp</string>
+    <string name="welcome">Welcome to Story App</string>
+    <string name="sharing_your_story">Sharing Your Story is Exciting and Fun!</string>
+    <string name="get_ready_to_share_story">Get Ready To Share Story?</string>
+    <string name="please_login_first_to_continue">Please Login First to Continue</string>
+    <string name="please_login_first">Please Login First</string>
+    <string name="app_widget_description">This is an app widget description</string>
+    <string name="bottom_bar_description">Bottom bar</string>
+    <string name="first_page_quote">"Discover Stories That Inspire Your Life!" Welcome to Story App, where amazing tales await. From thrilling adventures to heartfelt romances, every story is here just for you.</string>
+
+    <!-- Authentication Strings -->
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="name">Name</string>
+    <string name="not_have_account">Not Have Account?</string>
+    <string name="regist_your_data">Please Register Your Information to Create an Account.</string>
+    <string name="register_success">Register Successfully</string>
+    <string name="login_success">Welcome Back to Story App</string>
+    <string name="logout">Logout</string>
+    <string name="logout_success">Successfully Logged Out</string>
+
+    <!-- Validation Messages -->
+    <string name="validationPassword">Password must be at least 8 characters long</string>
+    <string name="validationEmail">Invalid email format</string>
+    <string name="error_empty_name">Empty Name</string>
+    <string name="error_empty_email">Empty Email</string>
+    <string name="error_empty_password">Empty Password</string>
+
+    <!-- Story Related Strings -->
+    <string name="detail">Detail</string>
+    <string name="add_story">Add Your Story</string>
+    <string name="description">Description</string>
+    <string name="camera">Camera</string>
+    <string name="gallery">Gallery</string>
+    <string name="upload">Upload Now</string>
+    <string name="story_uploaded_successfully">Story uploaded successfully!</string>
+    <string name="please_provide_a_description">Please provide a description.</string>
+    <string name="please_select_an_image">Please select an image.</string>
+    <string name="invalid_story_id_or_token">Invalid story ID or token</string>
+    <string name="add_new_story">Add new story</string>
+
+    <!-- Location and Map -->
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="story_map">Story Map</string>
+    <string name="add_location">Add Location</string>
+
+    <!-- Miscellaneous -->
+    <string name="press_again_for_exit">Press Again For Exit</string>
+    <string name="retry">Retry</string>
+    <string name="add_widget">Add widget</string>
+    <string name="home">All Stories</string>
+    <string name="setting">Setting</string>
+    <string name="another_fragment">Another Fragment</string>
+    <string name="content_description" />
+
+    <!-- Picture Labels -->
+    <string name="picture">Picture</string>
+    <string name="pictures">Picture</string>
+    <string name="pic">Picture</string>
+    <string name="empty">empty</string>
+
+    <!-- Permission and Error Messages -->
+    <string name="permission_request_granted">Permission request granted</string>
+    <string name="permission_request_denied">Permission request denied</string>
+    <string name="failed_take_picture">Failed to Take Picture</string>
+    <string name="failed_open_camera">Failed to Open Camera</string>
+</resources>
