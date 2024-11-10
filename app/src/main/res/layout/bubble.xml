@@ -71,7 +71,7 @@
                     android:drawablePadding="8dp"
                     android:textColor="@color/white"
                     android:textStyle="normal"
-                    app:drawableStartCompat="@drawable/access_time_filled"
+                    app:drawableStartCompat="@drawable/ic_time"
                     tools:text="12 Dec 2024" />
             </com.google.android.material.card.MaterialCardView>
 

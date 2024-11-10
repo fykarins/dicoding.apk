@@ -100,7 +100,7 @@
             android:layout_height="wrap_content"
             android:hint="@string/description"
             android:inputType="textMultiLine"
-            android:textColor="@color/white"
+            android:textColor="@color/soft_pink"
             android:textColorHint="@color/soft_pink"
             android:fontFamily="@font/open_sans" />
     </com.google.android.material.textfield.TextInputLayout>

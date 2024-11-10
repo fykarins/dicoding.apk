@@ -8,7 +8,7 @@
     tools:context=".ui.feature.main.MainActivity">
 
     <ImageView
-        android:id="@+id/ivPetra"
+        android:id="@+id/ivPinky"
         android:layout_width="355dp"
         android:layout_height="383dp"
         android:src="@drawable/svg_main"
@@ -29,7 +29,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ivPetra" />
+        app:layout_constraintTop_toBottomOf="@id/ivPinky" />
 
     <TextView
         android:id="@+id/tvDescription"

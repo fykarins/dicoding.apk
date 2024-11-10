@@ -35,13 +35,14 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         if (savedInstanceState != null) {
-            binding.emailEditText.setText(savedInstanceState.getString("email"))
-            binding.passwordEditText.setText(savedInstanceState.getString("password"))
-        }
+            val emailText = savedInstanceState.getString("email")
+            val passwordText = savedInstanceState.getString("password")
 
+            binding.emailEditText.setText(emailText)
+            binding.passwordEditText.setText(passwordText)
+        }
         setupUI()
         observeViewModel()
-
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -80,7 +81,6 @@ class LoginActivity : AppCompatActivity() {
         } else {
             binding.emailEditTextLayout.error = null
         }
-
 
         if (password.isEmpty()) {
             binding.passwordEditTextLayout.error = getString(R.string.error_empty_password)
