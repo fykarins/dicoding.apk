@@ -12,9 +12,9 @@ import com.example.storyapp.R
 import com.example.storyapp.data.user.UserPreferences
 import com.example.storyapp.databinding.ActivityDetailBinding
 import com.example.storyapp.ui.feature.factory.DetailViewModelFactory
-import com.example.storyapp.utils.Date
 import com.example.storyapp.utils.LoadImage
-import com.example.storyapp.utils.ShowToast
+import com.example.storyapp.utils.date
+import com.example.storyapp.utils.toast
 
 class DetailActivity : AppCompatActivity() {
     private lateinit var binding: ActivityDetailBinding
@@ -42,12 +42,11 @@ class DetailActivity : AppCompatActivity() {
         if (storyId != null && token != null) {
             detailViewModel.getStory(token, storyId)
         } else {
-            ShowToast(this, getString(R.string.invalid_story_id_or_token))
+            toast(this, getString(R.string.invalid_story_id_or_token))
             finish()
         }
 
         observeViewModel()
-
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -75,7 +74,7 @@ class DetailActivity : AppCompatActivity() {
                         storyDetail.story.photoUrl,
                         R.color.placeholder
                     )
-                    binding.includeRectangle.tvDate.text = Date(storyDetail.story.createdAt)
+                    binding.includeRectangle.tvDate.text = date(storyDetail.story.createdAt)
                     binding.includeRectangle.tvName.text = storyDetail.story.name
                     tvDescription.text = storyDetail.story.description
                 }

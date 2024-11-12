@@ -13,8 +13,8 @@ import com.example.storyapp.R
 import com.example.storyapp.data.local.ListStoryItem
 import com.example.storyapp.databinding.ItemStoryBinding
 import com.example.storyapp.ui.feature.detail.DetailActivity
-import com.example.storyapp.utils.Date
 import com.example.storyapp.utils.LoadImage
+import com.example.storyapp.utils.date
 
 class StoryPaging :
     PagingDataAdapter<ListStoryItem, StoryPaging.MyViewHolder>(DIFF_CALLBACK) {
@@ -37,7 +37,7 @@ class StoryPaging :
         fun bind(story: ListStoryItem) {
             binding.tvName.text = story.name
             binding.tvDescription.text = story.description
-            binding.tvDate.text = Date(story.createdAt)
+            binding.tvDate.text = date(story.createdAt)
 
             LoadImage.load(
                 binding.root.context,

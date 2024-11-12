@@ -12,7 +12,7 @@
         android:layout_height="wrap_content">
 
         <include
-            layout="@layout/toolbar_component"
+            layout="@layout/component"
             android:id="@+id/include_toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -45,7 +45,7 @@
             tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
         <include
-            layout="@layout/rectangle_icon"
+            layout="@layout/bubble"
             android:id="@+id/include_rectangle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

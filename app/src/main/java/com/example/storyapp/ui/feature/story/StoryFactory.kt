@@ -128,6 +128,7 @@ class StoryFactory(private val context: Context) :
     }
 }
 
+@Suppress("UNUSED_PARAMETER")
 private fun getBitmapFromUrl(context: Context, url: String): Bitmap? {
     return try {
         Picasso.get()

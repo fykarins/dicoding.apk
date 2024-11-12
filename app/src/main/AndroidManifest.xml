@@ -27,7 +27,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCRExvdYsddGfNu1W1fIaSIDn_MkY6LYL4" />
+            android:value="AAIzaSyCJ_Z04f5PnR0LNSzZvGFB1NDUIW7-QUtc" />
 
         <receiver
             android:name=".ui.feature.story.StoryApp"

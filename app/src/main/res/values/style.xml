@@ -18,7 +18,7 @@
     </style>
 
     <style name="TextCustom.bold" parent="TextCustom">
-        <item name="android:fontFamily">@font/open_sans_semibold</item>
+        <item name="android:fontFamily">@font/os_bold</item>
         <item name="android:textStyle">bold</item>
     </style>
 

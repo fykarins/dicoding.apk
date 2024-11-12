@@ -8,7 +8,7 @@
     tools:context=".ui.feature.main.HomeActivity">
 
     <include
-        layout="@layout/toolbar_component"
+        layout="@layout/component"
         android:id="@+id/include_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

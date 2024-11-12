@@ -108,5 +108,5 @@ dependencies {
     androidTestImplementation(libs.androidx.core.testing)
     androidTestImplementation(libs.kotlinx.coroutines.test)
     androidTestImplementation(libs.espresso.intents)
-    implementation("androidx.exifinterface:exifinterface:1.3.7")
+    implementation(libs.androidx.exifinterface)
 }

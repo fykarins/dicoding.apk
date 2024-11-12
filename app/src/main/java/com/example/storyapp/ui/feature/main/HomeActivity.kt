@@ -20,7 +20,7 @@ import com.example.storyapp.data.user.UserPreferences
 import com.example.storyapp.databinding.ActivityHomeBinding
 import com.example.storyapp.ui.feature.story.StoryApp
 import com.example.storyapp.ui.feature.story.StoryFragment
-import com.example.storyapp.utils.ShowToast
+import com.example.storyapp.utils.toast
 
 class HomeActivity : AppCompatActivity() {
     private lateinit var binding: ActivityHomeBinding
@@ -71,7 +71,7 @@ class HomeActivity : AppCompatActivity() {
                 }
 
                 doubleBackToExitPressedOnce = true
-                ShowToast(this@HomeActivity, getString(R.string.press_again_for_exit))
+                toast(this@HomeActivity, getString(R.string.press_again_for_exit))
                 Handler(Looper.getMainLooper()).postDelayed({
                     doubleBackToExitPressedOnce = false
                 }, 2000)
@@ -117,7 +117,7 @@ class HomeActivity : AppCompatActivity() {
                 updateIntent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, ids)
                 sendBroadcast(updateIntent)
 
-                ShowToast(this, getString(R.string.logout_success))
+                toast(this, getString(R.string.logout_success))
                 Handler(Looper.getMainLooper()).postDelayed({
                     val intent = Intent(this, MainActivity::class.java)
                     intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK

@@ -24,8 +24,8 @@ import com.example.storyapp.databinding.ActivityNewStoryBinding
 import com.example.storyapp.ui.feature.factory.NewStoryViewModelFactory
 import com.example.storyapp.ui.feature.main.CameraActivity
 import com.example.storyapp.ui.feature.main.CameraActivity.Companion.CAMERAX_RESULT
-import com.example.storyapp.utils.ShowToast
 import com.example.storyapp.utils.reduceFileImage
+import com.example.storyapp.utils.toast
 import com.example.storyapp.utils.uriToFile
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
@@ -100,7 +100,7 @@ class NewStoryActivity : AppCompatActivity() {
             when (storyResult) {
                 is StoryResult.Success -> {
                     hideProgressBar()
-                    ShowToast(this, getString(R.string.story_uploaded_successfully))
+                    toast(this, getString(R.string.story_uploaded_successfully))
 
                     setResult(Activity.RESULT_OK)
                     finish()
@@ -110,7 +110,7 @@ class NewStoryActivity : AppCompatActivity() {
 
                 is StoryResult.Error -> {
                     hideProgressBar()
-                    ShowToast(this, storyResult.error ?: "Failed to upload story.")
+                    toast(this, storyResult.error)
                 }
             }
         }
@@ -121,12 +121,12 @@ class NewStoryActivity : AppCompatActivity() {
         val description = binding.etDescription.text.toString().trim()
 
         if (description.isEmpty()) {
-            ShowToast(this, getString(R.string.please_provide_a_description))
+            toast(this, getString(R.string.please_provide_a_description))
             return
         }
 
         if (currentImageUri == null) {
-            ShowToast(this, getString(R.string.please_select_an_image))
+            toast(this, getString(R.string.please_select_an_image))
             return
         }
 
@@ -156,9 +156,9 @@ class NewStoryActivity : AppCompatActivity() {
             ActivityResultContracts.RequestPermission()
         ) { isGranted: Boolean ->
             if (isGranted) {
-                ShowToast(this, getString(R.string.permission_request_granted))
+                toast(this, getString(R.string.permission_request_granted))
             } else {
-                ShowToast(this, getString(R.string.permission_request_denied))
+                toast(this, getString(R.string.permission_request_denied))
             }
         }
 
@@ -212,9 +212,9 @@ class NewStoryActivity : AppCompatActivity() {
                     if (location != null) {
                         currentLat = location.latitude
                         currentLon = location.longitude
-                        ShowToast(this, "Location Added")
+                        toast(this, "Location Added")
                     } else {
-                        ShowToast(this, "Location not found")
+                        toast(this, "Location not found")
                     }
                 }
         } else {
@@ -228,7 +228,7 @@ class NewStoryActivity : AppCompatActivity() {
         if (isGranted) {
             getCurrentLocation()
         } else {
-            ShowToast(this, "Permission Location Denied")
+            toast(this, "Permission Location Denied")
         }
     }
 

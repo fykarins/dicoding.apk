@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat
 import java.util.Locale
 import java.util.TimeZone
 
-fun Date(createdAt: String): String {
+fun date(createdAt: String): String {
     return try {
         val inputFormat = SimpleDateFormat(
             "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'",

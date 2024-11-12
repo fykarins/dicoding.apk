@@ -7,7 +7,7 @@ import com.example.storyapp.data.story.AuthRepository
 import com.example.storyapp.data.story.StoryRepository
 
 object Injection {
-
+    @Suppress("UNUSED_PARAMETER")
     fun authRepository(context: Context): AuthRepository {
         val apiService = ApiConfig.getApiService()
         return AuthRepository.getInstance(apiService)

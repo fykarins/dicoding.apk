@@ -6,8 +6,6 @@
     <string name="get_ready_to_share_story">Get Ready To Share Story?</string>
     <string name="please_login_first_to_continue">Please Login First to Continue</string>
     <string name="please_login_first">Please Login First</string>
-    <string name="app_widget_description">This is an app widget description</string>
-    <string name="bottom_bar_description">Bottom bar</string>
     <string name="first_page_quote">"Discover Stories That Inspire Your Life!" Welcome to Story App, where amazing tales await. From thrilling adventures to heartfelt romances, every story is here just for you.</string>
 
     <!-- Authentication Strings -->
@@ -16,7 +14,6 @@
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="name">Name</string>
-    <string name="not_have_account">Not Have Account?</string>
     <string name="regist_your_data">Please Register Your Information to Create an Account.</string>
     <string name="register_success">Register Successfully</string>
     <string name="login_success">Welcome Back to Story App</string>
@@ -43,15 +40,9 @@
     <string name="invalid_story_id_or_token">Invalid story ID or token</string>
     <string name="add_new_story">Add new story</string>
 
-    <!-- Location and Map -->
-    <string name="title_activity_maps">MapsActivity</string>
-    <string name="story_map">Story Map</string>
-    <string name="add_location">Add Location</string>
-
     <!-- Miscellaneous -->
     <string name="press_again_for_exit">Press Again For Exit</string>
     <string name="retry">Retry</string>
-    <string name="add_widget">Add widget</string>
     <string name="home">All Stories</string>
     <string name="setting">Setting</string>
     <string name="another_fragment">Another Fragment</string>

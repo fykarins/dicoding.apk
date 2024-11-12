@@ -1,6 +1,143 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.feature.newstory.NewStoryActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            layout="@layout/component"
+            android:id="@+id/include_toolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivPicture"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="12dp"
+            android:contentDescription="@string/pictures"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toBottomOf="@id/include_toolbar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintWidth_percent="0.4"
+            app:srcCompat="@drawable/ic_placeholder" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/TextCustom.bold"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/get_ready_to_share_story"
+            android:textColor="@color/soft_pink"
+            android:textSize="20sp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toEndOf="@+id/ivPicture"
+            app:layout_constraintTop_toTopOf="@+id/ivPicture"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/tvDescription"
+            style="@style/TextCustom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/description"
+            android:textColor="@color/black"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toEndOf="@+id/ivPicture"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/btnCamera"
+            style="@style/RoundedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/camera"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/soft_pink"
+            android:drawableStart="@drawable/ic_camera"
+            android:layout_marginStart="16dp"
+            android:drawablePadding="8dp"
+            android:padding="8dp"
+            app:layout_constraintStart_toEndOf="@+id/ivPicture"
+            app:layout_constraintTop_toBottomOf="@+id/tvDescription" />
+
+        <Button
+            android:id="@+id/btnGallery"
+            style="@style/RoundedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gallery"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/soft_pink"
+            android:drawableStart="@drawable/ic_image"
+            android:layout_marginStart="16dp"
+            android:drawablePadding="8dp"
+            android:padding="8dp"
+            app:layout_constraintStart_toEndOf="@+id/btnCamera"
+            app:layout_constraintTop_toBottomOf="@+id/tvDescription" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintStart_toEndOf="@+id/ivPicture"
+            app:layout_constraintTop_toBottomOf="@+id/btnCamera"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:boxBackgroundMode="outline"
+            app:boxStrokeColor="@color/soft_pink">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/description"
+                android:inputType="textMultiLine"
+                android:textColor="@color/soft_pink"
+                android:textColorHint="@color/soft_pink" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <FrameLayout
+            android:id="@+id/buttonFrame"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/ivPicture"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_margin="16dp">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:visibility="gone"
+                android:layout_gravity="center" />
+
+            <Button
+                android:id="@+id/btnUpload"
+                style="@style/RoundedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/soft_pink"
+                android:text="@string/upload"
+                android:textColor="@color/white"
+                android:padding="8dp"
+                android:textSize="16sp" />
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -17,7 +17,7 @@ import com.example.storyapp.ui.adapter.LoadingAdapter
 import com.example.storyapp.ui.adapter.StoryPaging
 import com.example.storyapp.ui.feature.factory.StoryViewModelFactory
 import com.example.storyapp.ui.feature.newstory.NewStoryActivity
-import com.example.storyapp.utils.ShowToast
+import com.example.storyapp.utils.toast
 
 class StoryFragment : Fragment() {
 
@@ -55,12 +55,10 @@ class StoryFragment : Fragment() {
 
         setupRecyclerView()
 
-
         binding.fab.setOnClickListener {
             val intent = Intent(requireContext(), NewStoryActivity::class.java)
             addStoryLauncher.launch(intent)
         }
-
 
     }
 
@@ -79,16 +77,14 @@ class StoryFragment : Fragment() {
             binding.imgEmpty.visibility =
                 if (loadState.source.refresh is LoadState.NotLoading && storyAdapter.itemCount == 0) View.VISIBLE else View.GONE
 
-
             val errorState = loadState.source.refresh as? LoadState.Error
                 ?: loadState.source.append as? LoadState.Error
                 ?: loadState.source.prepend as? LoadState.Error
 
             errorState?.let {
-                it.error.localizedMessage?.let { it1 -> ShowToast(requireContext(), it1) }
+                it.error.localizedMessage?.let { it1 -> toast(requireContext(), it1) }
             }
         }
-
 
         observeViewModel()
     }
