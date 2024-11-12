@@ -20,6 +20,7 @@ import com.example.storyapp.data.user.UserPreferences
 import com.example.storyapp.databinding.ActivityHomeBinding
 import com.example.storyapp.ui.feature.story.StoryApp
 import com.example.storyapp.ui.feature.story.StoryFragment
+import com.example.storyapp.ui.feature.story.StoryMapFragment
 import com.example.storyapp.utils.toast
 
 class HomeActivity : AppCompatActivity() {
@@ -46,14 +47,14 @@ class HomeActivity : AppCompatActivity() {
 
         binding.bottomNavigation.selectedItemId = when (selectedFragmentIndex) {
             0 -> R.id.menu_story
-            1 -> R.id.menu_another
+            1 -> R.id.menu_story_map
             else -> R.id.menu_story
         }
 
         binding.bottomNavigation.setOnItemSelectedListener { item ->
             val position = when (item.itemId) {
                 R.id.menu_story -> 0
-                R.id.menu_another -> 1
+                R.id.menu_story_map -> 1
                 else -> 0
             }
             if (position != selectedFragmentIndex) {
@@ -93,7 +94,7 @@ class HomeActivity : AppCompatActivity() {
     private fun loadFragment(index: Int) {
         val selectedFragment = when (index) {
             0 -> StoryFragment()
-            1 -> AnotherFragment()
+            1 -> StoryMapFragment()
             else -> StoryFragment()
         }
 
@@ -148,5 +149,17 @@ class HomeActivity : AppCompatActivity() {
         updateIntent.action = AppWidgetManager.ACTION_APPWIDGET_UPDATE
         updateIntent.putExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS, ids)
         sendBroadcast(updateIntent)
+    }
+
+    override fun onPause() {
+        super.onPause()
+        if (!isFinishing) {
+        }
+    }
+
+    override fun onStop() {
+        super.onStop()
+        if (!isFinishing) {
+        }
     }
 }

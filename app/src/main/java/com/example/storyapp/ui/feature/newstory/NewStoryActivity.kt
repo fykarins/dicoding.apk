@@ -69,6 +69,14 @@ class NewStoryActivity : AppCompatActivity() {
 
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
 
+        binding.switchLocation.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                getCurrentLocation()
+            } else {
+                currentLat = null
+                currentLon = null
+            }
+        }
 
         if (!allPermissionsGranted()) {
             requestPermissionLauncher.launch(REQUIRED_PERMISSION)
@@ -82,7 +90,6 @@ class NewStoryActivity : AppCompatActivity() {
         binding.btnCamera.setOnClickListener { startCameraX() }
         binding.btnUpload.setOnClickListener { uploadImage(token!!) }
 
-
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -94,7 +101,6 @@ class NewStoryActivity : AppCompatActivity() {
         newStoryViewModel.isLoading.observe(this) { isLoading ->
             if (isLoading) showProgressBar() else hideProgressBar()
         }
-
 
         newStoryViewModel.uploadResult.observe(this) { storyResult ->
             when (storyResult) {
@@ -150,7 +156,6 @@ class NewStoryActivity : AppCompatActivity() {
         )
     }
 
-
     private val requestPermissionLauncher =
         registerForActivityResult(
             ActivityResultContracts.RequestPermission()
@@ -183,7 +188,6 @@ class NewStoryActivity : AppCompatActivity() {
             Log.d("Photo Picker", "No media selected")
         }
     }
-
 
     private fun startCameraX() {
         val intent = Intent(this, CameraActivity::class.java)
@@ -231,7 +235,6 @@ class NewStoryActivity : AppCompatActivity() {
             toast(this, "Permission Location Denied")
         }
     }
-
 
     private fun showImage() {
         val imageUri = newStoryViewModel.getImageUri()

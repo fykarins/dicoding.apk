@@ -45,7 +45,6 @@
     <string name="retry">Retry</string>
     <string name="home">All Stories</string>
     <string name="setting">Setting</string>
-    <string name="another_fragment">Another Fragment</string>
     <string name="content_description" />
 
     <!-- Picture Labels -->
@@ -59,4 +58,14 @@
     <string name="permission_request_denied">Permission request denied</string>
     <string name="failed_take_picture">Failed to Take Picture</string>
     <string name="failed_open_camera">Failed to Open Camera</string>
+
+    <!-- Adding feature -->
+    <string name="enable_location">Enable Location</string>
+    <string name="add_new_stories">Map Stories</string>
+
+    <!-- Maps -->
+    <string name="story_map">Story Map</string>
+    <string name="location_toggle_switch">Location toggle switch</string>
+    <string name="title_activity_maps">MapsActivity</string>
+
 </resources>

@@ -11,7 +11,7 @@
         tools:layout="@layout/fragment_story" />
 
     <fragment
-        android:id="@+id/menu_another"
-        android:name="com.example.storyapp.ui.feature.main.AnotherFragment"
-        tools:layout="@layout/fragment_another" />
+        android:id="@+id/menu_story_map"
+        android:name="com.example.storyapp.ui.feature.story.StoryMapFragment"
+        tools:layout="@layout/fragment_story_map" />
 </navigation>

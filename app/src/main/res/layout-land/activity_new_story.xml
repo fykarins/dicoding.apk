@@ -105,6 +105,7 @@
                 android:id="@+id/etDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:minHeight="48dp"
                 android:hint="@string/description"
                 android:inputType="textMultiLine"
                 android:textColor="@color/soft_pink"
@@ -115,10 +116,10 @@
             android:id="@+id/buttonFrame"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_margin="16dp"
             app:layout_constraintStart_toEndOf="@+id/ivPicture"
             app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_margin="16dp">
+            app:layout_constraintEnd_toEndOf="parent">
 
             <ProgressBar
                 android:id="@+id/progressBar"
@@ -134,10 +135,36 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/soft_pink"
+                android:padding="8dp"
                 android:text="@string/upload"
                 android:textColor="@color/white"
-                android:padding="8dp"
                 android:textSize="16sp" />
         </FrameLayout>
+
+        <TextView
+            android:id="@+id/tvAddLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"
+            android:fontFamily="@font/os_bold"
+            android:text="@string/enable_location"
+            android:textColor="@color/soft_pink"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@id/btnGallery"
+            app:layout_constraintTop_toTopOf="@id/btnCamera" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/switchLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:contentDescription="@string/location_toggle_switch"
+            app:thumbTint="@color/soft_pink"
+            app:trackTint="@color/soft_pink"
+            app:layout_constraintStart_toEndOf="@id/tvAddLocation"
+            app:layout_constraintBaseline_toBaselineOf="@id/tvAddLocation" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

@@ -1,4 +1,5 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -80,9 +81,34 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="8dp" />
 
+    <TextView
+        android:id="@+id/tvAddLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/os_bold"
+        android:text="@string/enable_location"
+        android:textColor="@color/soft_pink"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCamera" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switchLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:contentDescription="@string/location_toggle_switch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCamera"
+        app:thumbTint="@color/soft_pink"
+        app:trackTint="@color/soft_pink" />
+
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:layout_marginStart="12dp"
         android:layout_marginEnd="12dp"
         android:layout_marginBottom="8dp"
@@ -90,7 +116,7 @@
         app:strokeColor="@color/soft_pink"
         app:strokeWidth="2dp"
         app:hintTextColor="@color/soft_pink"
-        app:layout_constraintTop_toBottomOf="@+id/btnCamera"
+        app:layout_constraintTop_toBottomOf="@+id/tvAddLocation"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
@@ -98,11 +124,11 @@
             android:id="@+id/etDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/open_sans"
             android:hint="@string/description"
             android:inputType="textMultiLine"
             android:textColor="@color/soft_pink"
-            android:textColorHint="@color/soft_pink"
-            android:fontFamily="@font/open_sans" />
+            android:textColorHint="@color/soft_pink" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <FrameLayout

@@ -8,4 +8,10 @@
         android:title="@string/home"
         app:showAsAction="ifRoom" />
 
+    <item
+        android:id="@+id/menu_story_map"
+        android:icon="@drawable/ic_maps"
+        android:title="@string/story_map"
+        app:showAsAction="ifRoom" />
+
 </menu>

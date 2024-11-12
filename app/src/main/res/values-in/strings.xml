@@ -1,3 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- General Strings -->
+    <string name="app_name">StoryApp</string>
+    <string name="welcome">Selamat datang di Story App</string>
+    <string name="sharing_your_story">Berbagi Cerita Anda Itu Seru dan Menyenangkan!</string>
+    <string name="get_ready_to_share_story">Siap untuk Berbagi Cerita?</string>
+    <string name="please_login_first_to_continue">Silakan Login Terlebih Dahulu untuk Melanjutkan</string>
+    <string name="please_login_first">Silakan Login Terlebih Dahulu</string>
+    <string name="first_page_quote">"Temukan Cerita yang Menginspirasi Hidup Anda!" Selamat datang di Story App, tempat cerita menakjubkan menanti. Dari petualangan seru hingga romansa yang mengharukan, setiap cerita ada di sini hanya untuk Anda.</string>
+
+    <!-- Authentication Strings -->
+    <string name="register">Daftar</string>
+    <string name="login">Masuk</string>
+    <string name="email">Email</string>
+    <string name="password">Kata Sandi</string>
+    <string name="name">Nama</string>
+    <string name="regist_your_data">Silakan Daftarkan Informasi Anda untuk Membuat Akun.</string>
+    <string name="register_success">Pendaftaran Berhasil</string>
+    <string name="login_success">Selamat Datang Kembali di Story App</string>
+    <string name="logout">Keluar</string>
+    <string name="logout_success">Berhasil Keluar</string>
+
+    <!-- Validation Messages -->
+    <string name="validationPassword">Kata sandi harus memiliki panjang minimal 8 karakter</string>
+    <string name="validationEmail">Format email tidak valid</string>
+    <string name="error_empty_name">Nama Kosong</string>
+    <string name="error_empty_email">Email Kosong</string>
+    <string name="error_empty_password">Kata Sandi Kosong</string>
+
+    <!-- Story Related Strings -->
+    <string name="detail">Detail</string>
+    <string name="add_story">Tambahkan Cerita Anda</string>
+    <string name="description">Deskripsi</string>
+    <string name="camera">Kamera</string>
+    <string name="gallery">Galeri</string>
+    <string name="upload">Unggah Sekarang</string>
+    <string name="story_uploaded_successfully">Cerita berhasil diunggah!</string>
+    <string name="please_provide_a_description">Silakan berikan deskripsi.</string>
+    <string name="please_select_an_image">Silakan pilih gambar.</string>
+    <string name="invalid_story_id_or_token">ID cerita atau token tidak valid</string>
+    <string name="add_new_story">Tambah cerita baru</string>
+
+    <!-- Miscellaneous -->
+    <string name="press_again_for_exit">Tekan Lagi Untuk Keluar</string>
+    <string name="retry">Coba Lagi</string>
+    <string name="home">Semua Cerita</string>
+    <string name="setting">Pengaturan</string>
+    <string name="content_description" />
+
+    <!-- Picture Labels -->
+    <string name="picture">Gambar</string>
+    <string name="pictures">Gambar</string>
+    <string name="pic">Gambar</string>
+    <string name="empty">kosong</string>
+
+    <!-- Permission and Error Messages -->
+    <string name="permission_request_granted">Permintaan izin diberikan</string>
+    <string name="permission_request_denied">Permintaan izin ditolak</string>
+    <string name="failed_take_picture">Gagal Mengambil Gambar</string>
+    <string name="failed_open_camera">Gagal Membuka Kamera</string>
+
+    <!-- Adding feature -->
+    <string name="enable_location">Tambah Lokasi</string>
+    <string name="add_new_stories">Buat Cerita Baru</string>
+
+    <!-- Maps -->
+    <string name="story_map">Map Cerita</string>
+    <string name="location_toggle_switch">Location toggle switch</string>
+    <string name="title_activity_maps">Aktivitas Map</string>
 </resources>
