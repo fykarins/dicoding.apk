@@ -46,9 +46,9 @@ class StoryViewModelTest {
         expectedStories.value = data
         Mockito.`when`(storyRepository.getPaginatedStories("token")).thenReturn(expectedStories)
 
-        val storyWithoutMapViewModel = StoryViewModel(storyRepository)
+        val storyViewModel = StoryViewModel(storyRepository)
         val actualStories: PagingData<ListStoryItem> =
-            storyWithoutMapViewModel.stories("token").getOrAwaitValue()
+            storyViewModel.stories("token").getOrAwaitValue()
 
         val differ = AsyncPagingDataDiffer(
             diffCallback = StoryPaging.DIFF_CALLBACK,
@@ -69,9 +69,9 @@ class StoryViewModelTest {
         expectedStories.value = data
         Mockito.`when`(storyRepository.getPaginatedStories("token")).thenReturn(expectedStories)
 
-        val storyWithoutMapViewModel = StoryViewModel(storyRepository)
+        val storyViewModel = StoryViewModel(storyRepository)
         val actualStories: PagingData<ListStoryItem> =
-            storyWithoutMapViewModel.stories("token").getOrAwaitValue()
+            storyViewModel.stories("token").getOrAwaitValue()
 
         val differ = AsyncPagingDataDiffer(
             diffCallback = StoryPaging.DIFF_CALLBACK,
