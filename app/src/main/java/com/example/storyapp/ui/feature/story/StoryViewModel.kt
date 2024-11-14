@@ -17,8 +17,6 @@ class StoryViewModel(private val storyRepository: StoryRepository) : ViewModel()
         _isLoading.value = true
         return storyRepository.getPaginatedStories(token)
             .cachedIn(viewModelScope)
-            .also {
-                _isLoading.value = false
-            }
+            .also { _isLoading.value = false }
     }
 }

@@ -8,11 +8,11 @@ import androidx.paging.PagingData
 import androidx.paging.liveData
 import com.example.storyapp.data.local.ListStoryItem
 import com.example.storyapp.data.local.StoryDatabase
+import com.example.storyapp.data.remote.ApiService
 import com.example.storyapp.data.remote.DetailStoryResponse
 import com.example.storyapp.data.remote.StoryResponse
 import com.example.storyapp.data.remote.StoryRetrofit
 import com.example.storyapp.data.remote.UploadResponse
-import com.example.storyapp.data.remote.ApiService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import okhttp3.MultipartBody
@@ -69,13 +69,13 @@ class StoryRepository private constructor(
         }
     }
 
-    suspend fun getAllStoriesWithMap(
+    suspend fun getAllStories(
         token: String,
         location: Int = 1
     ): StoryResult<StoryResponse> {
         return withContext(Dispatchers.IO) {
             try {
-                val response = apiService.getAllStoriesWithMap("Bearer $token", location)
+                val response = apiService.getAllStories("Bearer $token", location)
 
                 if (!response.error) {
                     StoryResult.Success(response)

@@ -16,7 +16,7 @@ class StoryMapViewModel(private val storyRepository: StoryRepository) : ViewMode
     private val _stories = MutableLiveData<StoryResult<List<ListStoryItem>>>()
     val stories: LiveData<StoryResult<List<ListStoryItem>>> = _stories
 
-    fun getAllStoriesWithMap(
+    fun getAllStories(
         token: String,
         location: Int = 1
     ) {

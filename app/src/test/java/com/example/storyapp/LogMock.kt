@@ -1,4 +1,8 @@
 package com.example.storyapp
 
-class LogMock {
+object Log {
+    @JvmStatic
+    fun isLoggable(tag: String?, level: Int): Boolean {
+        return true
+    }
 }

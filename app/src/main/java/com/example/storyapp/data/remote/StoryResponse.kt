@@ -11,8 +11,8 @@ data class ListStoryItem(
     val createdAt: String,
     val name: String,
     val description: String,
-    val lon: Any,
     val id: String,
-    val lat: Any
+    val lon: Double?,
+    val lat: Double?
 )
 

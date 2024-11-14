@@ -60,7 +60,7 @@ class StoryMapFragment : Fragment(), OnMapReadyCallback {
 
         val token = UserPreferences(requireContext()).getToken()
         token?.let {
-            storyMapViewModel.getAllStoriesWithMap(it)
+            storyMapViewModel.getAllStories(it)
         } ?: run {
             toast(requireContext(), "Token not available")
         }
@@ -112,7 +112,7 @@ class StoryMapFragment : Fragment(), OnMapReadyCallback {
                 val lat = story.lat
                 val lon = story.lon
                 if (lat != null && lon != null) {
-                    val latLng = LatLng(lat as Double, lon as Double)
+                    val latLng = LatLng(lat, lon)
                     mMap.addMarker(
                         MarkerOptions()
                             .position(latLng)
@@ -120,13 +120,13 @@ class StoryMapFragment : Fragment(), OnMapReadyCallback {
                             .snippet(story.description)
                     )
                     boundsBuilder.include(latLng)
+
+                    val bounds = boundsBuilder.build()
+                    setMapStyle()
+                    val padding = 100
+                    mMap.animateCamera(CameraUpdateFactory.newLatLngBounds(bounds, padding))
                 }
             }
-
-            val bounds = boundsBuilder.build()
-            setMapStyle()
-            val padding = 100
-            mMap.animateCamera(CameraUpdateFactory.newLatLngBounds(bounds, padding))
         } else {
             Toast.makeText(context, "Map cannot appear", Toast.LENGTH_SHORT).show()
         }

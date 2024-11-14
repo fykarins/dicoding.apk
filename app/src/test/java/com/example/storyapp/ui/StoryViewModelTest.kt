@@ -18,15 +18,19 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runTest
 import org.junit.Assert
+import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.mockito.Mock
 import org.mockito.Mockito
-import org.mockito.junit.MockitoJUnitRunner
+import org.mockito.MockitoAnnotations
+import org.robolectric.RobolectricTestRunner
+import org.robolectric.annotation.Config
 
 @ExperimentalCoroutinesApi
-@RunWith(MockitoJUnitRunner::class)
+@RunWith(RobolectricTestRunner::class)
+@Config(manifest = Config.NONE)
 class StoryViewModelTest {
 
     @get:Rule
@@ -37,6 +41,13 @@ class StoryViewModelTest {
 
     @Mock
     private lateinit var storyRepository: StoryRepository
+    private lateinit var storyViewModel: StoryViewModel
+
+    @Before
+    fun setUp() {
+        MockitoAnnotations.openMocks(this)
+        storyViewModel = StoryViewModel(storyRepository)
+    }
 
     @Test
     fun `when Get Stories Should Not Null and Return Data`() = runTest {

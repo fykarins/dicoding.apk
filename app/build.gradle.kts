@@ -104,6 +104,7 @@ dependencies {
     testImplementation(libs.mockk)
     testImplementation(libs.androidx.paging.common)
     testImplementation(libs.mockito.inline.v500)
+    testImplementation(libs.robolectric)
 
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

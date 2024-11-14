@@ -54,7 +54,7 @@ interface ApiService {
     ): UploadResponse
 
     @GET("stories")
-    suspend fun getAllStoriesWithMap(
+    suspend fun getAllStories(
         @Header("Authorization") token: String,
         @Query("location") location: Int = 1
     ): StoryResponse

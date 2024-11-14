@@ -5,7 +5,6 @@ import java.util.Random
 import java.util.UUID
 
 object DataDummy {
-
     fun generateDummyStoryResponse(): List<ListStoryItem> {
         val items: MutableList<ListStoryItem> = arrayListOf()
         for (i in 1..100) {
