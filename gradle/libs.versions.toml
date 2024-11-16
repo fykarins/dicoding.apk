@@ -82,7 +82,6 @@ androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "roomKtx"
 robolectric = { module = "org.robolectric:robolectric", version.ref = "robolectric" }
 room-compiler = { module = "androidx.room:room-compiler", version.ref = "roomCompiler" }
 
-mockito-inline = { module = "org.mockito:mockito-inline", version.ref = "mockitoInline" }
 mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockitoCore" }
 androidx-core-testing = { module = "androidx.arch.core:core-testing", version.ref = "coreTesting" }
 kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinxCoroutinesTest" }
